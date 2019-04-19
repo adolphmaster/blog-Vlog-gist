@@ -7,6 +7,8 @@ var itemsDDD = document.getElementsByClassName("btn");
               break;
 　　　　　　}
 　　　　};
+//隐藏Token提示信息
+document.getElementsByClassName("el-alert--info")[0].style.display='none';
 //去除下面1行代码，去除博客菜单使用帮助和redeme.md
 //{path:"/user/helper",redirect:"/user/helper/main",component:M,meta:{type:"user",icon:"el-icon-printer",title:"使用帮助",mini:!0},children:[{path:"main",component:Nt,meta:{title:"使用帮助"}}]},{path:"/user/readme",redirect:"/user/readme/main",component:M,meta:{type:"user",icon:"el-icon-document",title:"README.md"},children:[{path:"main",component:Ut,meta:{title:"README.md"}}]}
 //# sourceMappingURL=app.5ffe06ff6f8b21ce8002.js.map
