@@ -18,40 +18,7 @@ var flags2Demo=0;
 　　　　};
 //隐藏Token提示信息
 document.getElementsByClassName("el-alert--info")[0].style.display='none';
-var listLog = document.getElementsByClassName("el-icon-star-off")[1].parentNode;
-listLog.onclick=function(){
-var numActive=1;
-var numActive1= document.getElementsByClassName("number active");
-	if(typeof(numActive1)!=="undefined"&&typeof(numActive1[0])!=="undefined"){
-	   numActive = numActive1[0].innerHTML;
-	   }
-	if(numActive<1){
-	numActive=1;	
-	}
-	    alert(numActive);
-	var divContent= document.getElementsByClassName("el-card__header")[0].parentNode.parentNode;
-    xmlHttp=new XMLHttpRequest();
-        xmlHttp.open("GET","https://api.github.com/users/adolphmaster/gists?page="+numActive+"&per_page=5",true);
-        xmlHttp.send(null);
-        xmlHttp.onreadystatechange=function () {
-            if (xmlHttp.readyState ==4 && xmlHttp.status ==200){
-                var jsonTextArr = xmlHttp.responseText;
-                for(var i in jsonTextArr){
-			jsonText = jsonTextArr[i].files;
-			for(var key in jsonText){//遍历json数组时，这么写p为索引，0,1
-  			 	//alert(key+"--"+jsonText[key].raw_url);
-				
-				var input = document.createElement("input");  
-           			 input.setAttribute('type', 'text');     
-           			 input.value = key+"---"+jsonText[key].raw_url;
-            			divContent.appendChild(input);  
-			}
-		}
 
-            }
-        }
-
-}
 //去除下面1行代码，去除博客菜单使用帮助和redeme.md
 //{path:"/user/helper",redirect:"/user/helper/main",component:M,meta:{type:"user",icon:"el-icon-printer",title:"使用帮助",mini:!0},children:[{path:"main",component:Nt,meta:{title:"使用帮助"}}]},{path:"/user/readme",redirect:"/user/readme/main",component:M,meta:{type:"user",icon:"el-icon-document",title:"README.md"},children:[{path:"main",component:Ut,meta:{title:"README.md"}}]}
 //# sourceMappingURL=app.5ffe06ff6f8b21ce8002.js.map
