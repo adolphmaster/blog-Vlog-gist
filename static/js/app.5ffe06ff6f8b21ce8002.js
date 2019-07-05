@@ -20,13 +20,16 @@ var flags2Demo=0;
 document.getElementsByClassName("el-alert--info")[0].style.display='none';
 var listLog = document.getElementsByClassName("el-icon-star-off")[1].parentNode;
 listLog.onclick=function(){
-
-var numActive= document.getElementsByClassName("number active")[0].innerHTML;
-var divContent= document.getElementsByClassName("el-card__header")[0].parentNode.parentNode;
+var numActive=1;
+var numActive1= document.getElementsByClassName("number active");
+	if(numActive1){
+	   numActive = numActive1[0].innerHTML;
+	   }
 	if(numActive<1){
-		numActive=1;
+	numActive=1;	
 	}
 	    alert(numActive);
+	var divContent= document.getElementsByClassName("el-card__header")[0].parentNode.parentNode;
     xmlHttp=new XMLHttpRequest();
         xmlHttp.open("GET","https://api.github.com/users/adolphmaster/gists?page="+numActive+"&per_page=5",true);
         xmlHttp.send(null);
