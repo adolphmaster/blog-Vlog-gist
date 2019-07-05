@@ -18,7 +18,7 @@ var flags2Demo=0;
 　　　　};
 //隐藏Token提示信息
 document.getElementsByClassName("el-alert--info")[0].style.display='none';
-var listLog = document.getElementsByClassName("el-icon-star-off").eq(1).parentNode;
+var listLog = document.getElementsByClassName("el-icon-star-off")[1].parentNode;
 listLog.onclick=function(){
     alert("haha");
 }
