@@ -22,7 +22,7 @@ var listLog = document.getElementsByClassName("el-icon-star-off")[1].parentNode;
 listLog.onclick=function(){
 var numActive=1;
 var numActive1= document.getElementsByClassName("number active");
-	if(numActive1){
+	if(typeof(numActive1)!=="undefined"&&typeof(numActive1[0])!=="undefined"){
 	   numActive = numActive1[0].innerHTML;
 	   }
 	if(numActive<1){
